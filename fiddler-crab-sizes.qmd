@@ -1,9 +1,10 @@
 ---
-title: "lterdatasampler"
+title: "Pie Crab"
 format: html
 editor: visual
 execute: 
   echo: false
+  warning: false
 ---
 
 ## 
@@ -17,6 +18,8 @@ library(tidyverse)
 View(pie_crab)
 ```
 
+## Latitude and Size Graph
+
 ```{r}
 #| fig-cap: "this is my caption"
 
@@ -25,6 +28,9 @@ ggplot(pie_crab, aes(x = latitude, y = size)) +
 
   
 ```
+
+## Table statistics by size
+
 ```{r}
 library(kableExtra)
 
@@ -36,3 +42,4 @@ pie_crab %>% group_by(site) %>%
             
 ```
 
+### Source: vignettes/articles/pie_crab_vignette.Rmd
