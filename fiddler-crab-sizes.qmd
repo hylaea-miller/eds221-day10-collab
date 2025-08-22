@@ -8,8 +8,15 @@ editor: visual
 
 ```{r}
 library(lterdatasampler)
+library(tidyverse)
 ```
 
 ```{r}
 View(pie_crab)
 ```
+
+```{r}
+ggplot(pie_crab, aes(x = latitude, y = size)) +
+  geom_point()
+```
+
