@@ -26,10 +26,13 @@ ggplot(pie_crab, aes(x = latitude, y = size)) +
   
 ```
 ```{r}
+library(kableExtra)
+
 pie_crab %>% group_by(site) %>% 
   summarise(mean = round(mean(size), 2),
             standard_dev = sd(size),
-            sample_size = n())
+            sample_size = n()) %>% 
+  kable(col.names = c("Size", "Mean", "Standard Deviation", "Sample Size")) 
             
 ```
 
